@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herman Miller Aeron — TechZoneDaily</title>
+<title>Herman Miller Aeron &mdash; TechZoneDaily</title>
 <meta name="description" content="12-year warranty. If you sit 8 hours daily this is the one investment that pays back.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0A0C0F;--bg2:#111318;--bg3:#1A1D24;--border:#252830;--border2:#2E323C;--txt:#E8EAF0;--txt2:#9098A8;--txt3:#5A6070;--acc:#00D4FF;--acc-dim:rgba(0,212,255,0.1);--acc-glow:rgba(0,212,255,0.2);--grn:#00E599;--grn-dim:rgba(0,229,153,0.1);--amz:#FF9900;--red:#FF4444;--mono:'Space Mono',monospace;--sans:'DM Sans',sans-serif;--r:10px;--r-lg:16px}
+:root{--bg:#0A0C0F;--bg2:#111318;--bg3:#1A1D24;--border:#252830;--border2:#2E323C;--txt:#E8EAF0;--txt2:#9098A8;--txt3:#5A6070;--acc:#00D4FF;--acc-dim:rgba(0,212,255,0.1);--acc-glow:rgba(0,212,255,0.2);--grn:#00E599;--grn-dim:rgba(0,229,153,0.1);--amz:#FF9900;--red:#FF4444;--star:#F59E0B;--mono:'Space Mono',monospace;--sans:'DM Sans',sans-serif;--r:10px;--r-lg:16px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--txt);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--bg);color:var(--txt);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:0}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5}
 .wrap{max-width:680px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
 a{color:inherit;text-decoration:none}
@@ -28,13 +28,21 @@ header{padding:28px 0 20px;border-bottom:1px solid var(--border)}
 .breadcrumb{font-family:var(--mono);font-size:10px;color:var(--txt3);padding:16px 0 0;letter-spacing:0.04em}
 .breadcrumb a{color:var(--acc);text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
-.product-hero{padding:32px 0 28px;border-bottom:1px solid var(--border)}
-.product-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.product-img-wrap{padding:28px 0 0;text-align:center}
+.product-img{max-width:320px;max-height:320px;border-radius:var(--r-lg);background:var(--bg2);border:1px solid var(--border);display:inline-block;overflow:hidden;padding:16px}
+.product-img img{max-width:100%;max-height:280px;object-fit:contain}
+.product-hero{padding:24px 0 24px;border-bottom:1px solid var(--border)}
+.product-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
 .cat-badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;background:var(--bg3);border:1px solid var(--border2);color:var(--txt3)}
 .score-badge{font-family:var(--mono);font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;background:var(--grn-dim);border:1px solid rgba(0,229,153,0.2);color:var(--grn)}
 .product-name{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;line-height:1.2;letter-spacing:-0.03em;margin-bottom:10px}
+.product-stars{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.stars{color:var(--star);font-size:16px;letter-spacing:1px}
+.stars-dim{color:var(--border2)}
+.stars-text{font-family:var(--mono);font-size:12px;color:var(--txt2)}
+.stars-reviews{font-family:var(--mono);font-size:12px;color:var(--txt3)}
 .product-hook{font-size:15px;color:var(--txt2);line-height:1.7;max-width:540px}
-.cta-section{padding:32px 0;border-bottom:1px solid var(--border)}
+.cta-section{padding:28px 0;border-bottom:1px solid var(--border)}
 .cta-box{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-lg);padding:28px;position:relative;overflow:hidden}
 .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--acc-glow),transparent)}
 .cta-price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
@@ -45,12 +53,23 @@ header{padding:28px 0 20px;border-bottom:1px solid var(--border)}
 .btn-buy svg{width:16px;height:16px;flex-shrink:0}
 .cta-trust{display:flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--mono);font-size:10px;color:var(--txt3);letter-spacing:0.04em}
 .cta-trust .dot{width:5px;height:5px;border-radius:50%;background:var(--grn);box-shadow:0 0 6px var(--grn);flex-shrink:0}
-.details-section{padding:28px 0}
+.details-section{padding:28px 0;border-bottom:1px solid var(--border)}
 .detail-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--txt3);margin-bottom:14px}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .detail-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
 .detail-item-label{font-family:var(--mono);font-size:10px;color:var(--txt3);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px}
 .detail-item-value{font-size:15px;font-weight:600;color:var(--txt)}
+.similar-section{padding:28px 0;border-bottom:1px solid var(--border)}
+.similar-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--txt3);margin-bottom:14px}
+.similar-grid{display:flex;flex-direction:column;gap:10px}
+.sim-card{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s}
+.sim-card:hover{border-color:var(--border2);background:var(--bg3)}
+.sim-img{width:56px;height:56px;border-radius:6px;background:var(--bg3);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sim-img img{width:100%;height:100%;object-fit:contain;padding:2px}
+.sim-name{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:2px}
+.sim-meta{font-family:var(--mono);font-size:10px;color:var(--txt3)}
+.sim-price{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--txt)}
+.sim-view{display:inline-flex;align-items:center;gap:3px;font-size:11px;color:var(--acc);font-weight:600;margin-top:4px}
 .bottom-cta{padding:24px 0 12px;border-top:1px solid var(--border)}
 .btn-buy-sm{display:inline-flex;align-items:center;gap:6px;padding:11px 20px;background:var(--amz);color:#0A0C0F;border-radius:8px;font-size:13px;font-weight:700;font-family:var(--sans);text-decoration:none;transition:all 0.15s}
 .btn-buy-sm:hover{background:#FFAA11;transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,153,0,0.3)}
@@ -62,7 +81,23 @@ footer{margin-top:40px;padding:24px 0 28px;border-top:1px solid var(--border)}
 .footer-brand span{color:var(--acc)}
 .footer-disc{font-size:11px;color:var(--txt3);line-height:1.7;max-width:440px}
 .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--txt3);letter-spacing:0.04em}
-@media(max-width:500px){.detail-grid{grid-template-columns:1fr}.cta-price{font-size:26px}.bottom-cta{display:flex;flex-direction:column;gap:8px}.browse-link{margin-left:0}}
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg2);border-top:1px solid var(--border2);padding:12px 16px;z-index:100;box-shadow:0 -4px 20px rgba(0,0,0,0.4)}
+.mob-bar-inner{display:flex;align-items:center;gap:12px;max-width:680px;margin:0 auto}
+.mob-bar-info{flex:1;min-width:0}
+.mob-bar-name{font-size:13px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mob-bar-price{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--txt)}
+.mob-bar .btn-buy{width:auto;padding:12px 20px;font-size:14px;flex-shrink:0}
+@media(max-width:600px){
+  .detail-grid{grid-template-columns:1fr}
+  .cta-price{font-size:26px}
+  .bottom-cta{display:flex;flex-direction:column;gap:8px}
+  .browse-link{margin-left:0}
+  .product-img{max-width:260px;padding:12px}
+  body{padding-bottom:76px}
+  .mob-bar{display:block}
+  .sim-card{grid-template-columns:48px 1fr auto;gap:10px;padding:10px 12px}
+  .sim-img{width:48px;height:48px}
+}
 </style>
 </head>
 <body>
@@ -85,12 +120,17 @@ footer{margin-top:40px;padding:24px 0 28px;border-top:1px solid var(--border)}
     <div class="breadcrumb">
       <a href="../../">Home</a> &nbsp;/&nbsp; Chair &nbsp;/&nbsp; Herman Miller Aeron
     </div>
+
     <div class="product-hero">
       <div class="product-meta">
         <span class="cat-badge">Chair</span>
-        <span class="score-badge">Score 6.3</span>
+        <span class="score-badge">Score 7.2</span>
       </div>
       <h1 class="product-name">Herman Miller Aeron</h1>
+      <div class="product-stars">
+        <span class="stars" style="font-size:16px">&#9733;&#9733;&#9733;&#9733;<span class="stars-dim">&#9733;</span></span>
+        <span class="stars-text">4.7/5</span> <span class="stars-reviews">&middot; 2,100 reviews</span>
+      </div>
       <p class="product-hook">12-year warranty. If you sit 8 hours daily this is the one investment that pays back.</p>
     </div>
     <div class="cta-section">
@@ -112,11 +152,49 @@ footer{margin-top:40px;padding:24px 0 28px;border-top:1px solid var(--border)}
       <div class="detail-label">Product Details</div>
       <div class="detail-grid">
         <div class="detail-item"><div class="detail-item-label">Category</div><div class="detail-item-value">Chair</div></div>
-        <div class="detail-item"><div class="detail-item-label">TZD Score</div><div class="detail-item-value">6.3 / 10</div></div>
+        <div class="detail-item"><div class="detail-item-label">TZD Score</div><div class="detail-item-value">7.2 / 10</div></div>
         <div class="detail-item"><div class="detail-item-label">Amazon Rating</div><div class="detail-item-value">4.7 / 5</div></div>
         <div class="detail-item"><div class="detail-item-label">Reviews</div><div class="detail-item-value">2,100</div></div>
       </div>
     </div>
+  <div class="similar-section">
+    <div class="similar-label">You Might Also Like</div>
+    <div class="similar-grid">
+    <a class="sim-card" href="../asus-proart-pa279cv/">
+      <div class="sim-img"><span style="font-size:10px;color:var(--txt3)">MON</span></div>
+      <div>
+        <div class="sim-name">ASUS ProArt PA279CV</div>
+        <div class="sim-meta">Monitor <span class="stars" style="font-size:11px">&#9733;&#9733;&#9733;&#9733;<span class="stars-dim">&#9733;</span></span></div>
+      </div>
+      <div style="text-align:right">
+        <div class="sim-price">$399</div>
+        <div class="sim-view">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </div>
+    </a>
+    <a class="sim-card" href="../autonomous-smartdesk-pro/">
+      <div class="sim-img"><span style="font-size:10px;color:var(--txt3)">DES</span></div>
+      <div>
+        <div class="sim-name">Autonomous SmartDesk Pro</div>
+        <div class="sim-meta">Desk <span class="stars" style="font-size:11px">&#9733;&#9733;&#9733;&#9733;<span class="stars-dim">&#9733;</span></span></div>
+      </div>
+      <div style="text-align:right">
+        <div class="sim-price">$599</div>
+        <div class="sim-view">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </div>
+    </a>
+    <a class="sim-card" href="../flexispot-e7-pro/">
+      <div class="sim-img"><span style="font-size:10px;color:var(--txt3)">DES</span></div>
+      <div>
+        <div class="sim-name">Flexispot E7 Pro</div>
+        <div class="sim-meta">Desk <span class="stars" style="font-size:11px">&#9733;&#9733;&#9733;&#9733;<span class="stars-dim">&#9733;</span></span></div>
+      </div>
+      <div style="text-align:right">
+        <div class="sim-price">$499</div>
+        <div class="sim-view">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </div>
+    </a>
+    </div>
+  </div>
     <div class="bottom-cta">
       <a class="btn-buy-sm" href="https://amzn.to/REPLACE" target="_blank" rel="nofollow sponsored">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Check Price
@@ -132,5 +210,16 @@ footer{margin-top:40px;padding:24px 0 28px;border-top:1px solid var(--border)}
     <div class="footer-bottom">&copy; 2026 TechZoneDaily</div>
   </div>
 </footer>
+<div class="mob-bar">
+  <div class="mob-bar-inner">
+    <div class="mob-bar-info">
+      <div class="mob-bar-name">Herman Miller Aeron</div>
+    </div>
+    <div class="mob-bar-price">$1495</div>
+    <a class="btn-buy" href="https://amzn.to/REPLACE" target="_blank" rel="nofollow sponsored">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Check Price
+    </a>
+  </div>
+</div>
 </body>
 </html>
